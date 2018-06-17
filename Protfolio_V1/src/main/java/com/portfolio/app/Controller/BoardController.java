@@ -42,7 +42,7 @@ public class BoardController {
 			HttpServletRequest request, HttpServletResponse response, HttpSession session) throws Exception{
 		
 		B0010VO detail = new B0010VO();
-		detail = (B0010VO) dao.select("b0010.selete_b0010", b0010VO);
+		detail = (B0010VO) dao.select("b0010.select_b0010", b0010VO);
 		model.addAttribute("detail", detail);
 		
 		return "b0010/b0010D";
