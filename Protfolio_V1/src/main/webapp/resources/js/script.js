@@ -8,14 +8,5 @@ $(document).ready(function()
 		}
 		
 		section.on('mouseover', toggleAccordion);
-		//section.hover(toggleAccordion);
 	}
 );
-/*
-function onLoadPage(url){
-		$("body").fadeOut(100, function(){
-			console.log("fadeOut");
-			window.location.href = url;
-		})
-	}*/
-
