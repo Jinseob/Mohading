@@ -10,15 +10,33 @@
 		
 	})
 	
+	/* 상세 화면 */
+	function fncGetDetail(key){
+		$("#id").val(key);
+		$("#frm").attr({target : "_self", action : "./b0010D.do", method : "post"});
+		$("#frm").submit();
+	}
 	
+	/* 신규 화면 */
+	function fncCreate(){
+		$("#frm").attr({target : "_self", action : "./b0010INS.do", method : "post"});
+		$("#frm").submit();
+	}
 	
+	/* 화면 이동 */
+	function fncGoPage(page){
+		$("#frm").attr({target : "_self", action : "./" + page, method : "post"});
+		$("#frm").submit();
+	}
 	</script>
 </head>
 <body>
-<!-- Side Part -->
-<aside></aside>
 
+<form id="frm" name="frm">
+	<input type="hidden" id="id" name="id">
+</form>
 <div class="container">
+	<!-- Header -->
 	<jsp:include page="/WEB-INF/views/common/header.jsp" />
 
 <!--   <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
@@ -96,7 +114,8 @@
 	</c:choose>
   </div>
 </div>
-
+	
+	<!-- Footer -->
 	<jsp:include page="/WEB-INF/views/common/footer.jsp" />
 </body>
 </html>

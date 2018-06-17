@@ -43,7 +43,7 @@ public class BoardController {
 		
 		B0010VO detail = new B0010VO();
 		detail = (B0010VO) dao.select("b0010.selete_b0010", b0010VO);
-		model.addAttribute("detail", b0010VO);
+		model.addAttribute("detail", detail);
 		
 		return "b0010/b0010D";
 	}
@@ -57,15 +57,15 @@ public class BoardController {
 		String url = "";
 		
 		if(procType.equals("INS")) {
-			url = "i";
+			url = "I";
 			
 			dao.insert("b0010.insert_b0010", b0010VO);	// dao 에 null 값이 들어가있음. 왜일까.
 		}else if(procType.equals("UPD")) {
-			url = "u";
+			url = "U";
 			
 			dao.update("b0010.update_b0010", b0010VO);
 		}else if(procType.equals("DEL")) {
-			url = "l";
+			url = "L";
 			
 			dao.delete("b0010.delete_b0010", b0010VO);
 		}
