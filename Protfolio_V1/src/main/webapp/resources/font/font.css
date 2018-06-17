@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Roboto Mono Bold';
+    src: url(./RobotoMono-Bold.ttf);
+    style: 'normal';
+    weight: '700';
+}
+
+@font-face {
+    font-family: 'Roboto Mono Medium';
+    src: url(./RobotoMono-Medium.ttf);
+    style: 'normal';
+    weight: '500';
+}
+
+@font-face {
+    font-family: 'Roboto Mono Regular';
+    src: url(./RobotoMono-Regular.ttf);
+    style: 'normal';
+    font-weight: '400';
+}
+
+@font-face {
+    font-family: 'Roboto Mono Light';
+    src: url(./RobotoMono-Light.ttf);
+    style: 'normal';
+    weight: '300';
+}
+
+@font-face {
+    font-family: 'Roboto Mono Thin';
+    src: url(./RobotoMono-Thin.ttf);
+    style: 'normal';
+    weight: '100';
+}
+
+h1{
+	font-family:"ROboto Mono Bold"
+}

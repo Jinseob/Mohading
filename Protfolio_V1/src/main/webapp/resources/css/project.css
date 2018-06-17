@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700');
+
+body {
+      position: relative;
+      font-family: 'Roboto Mono', monospace;
+  }
+ul.nav {
+      top: 160px;
+      left:80px;
+      position: fixed;
+  }
+ul.flex-column {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: column !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+
+.nav-item {
+	width: 240px;
+	height:48px;
+}
+.nav-item > .nav-link {
+	color:black;
+}
+.nav-item > .active {
+	color:tomato;
+}
+.nav-item > .nav-link:hover {
+	background-color:#ffff80;
+}
+.col-9 {
+      font-size: 28px;
+  }
+#section1 {color: #fff; background-color: #1E88E5; height:500px;}
+#section2 {color: #fff; background-color: #673ab7; height:500px;}
+#section3 {color: #fff; background-color: #ff9800; height:500px;}
+  
+@media screen and (max-width: 810px) {
+  #section1, #section2, #section3 {
+        margin-left: 0px;
+    }
+}
+ #mainNav{
+ 	width:320px;
+ 	position: absolute;
+ }
+ .row{
+ 	margin:0;
+ }
+ .contents{
+ 	padding-left:320px;
+ 	width:100%;
+ 	position: absolute;
+ }
+ 
+ 
+ 
+ 
+ 
+ .outer {
+  	position: fixed;
+	left:48px;
+  	top:48px;
+  	width: 64px;
+	cursor: pointer;
+}
+
+.inner {
+  width: inherit;
+  text-align: center;
+}
+
+label { 
+  font-size: 1em; 
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #000000;
+  transition: all .1s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.inner:before, .inner:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: inherit;
+  background: #000000;
+  left: 0;
+  transition: all .1s ease-in;
+}
+
+.inner:before {
+  top: 50%; 
+  transform: rotate(45deg);  
+}
+
+.inner:after {  
+  bottom: 50%;
+  transform: rotate(-45deg);  
+}
+
+.outer:hover label {
+  opacity: 1;
+}
+
+.outer:hover .inner:before,
+.outer:hover .inner:after {
+  transform: rotate(0);
+}
+
+.outer:hover .inner:before {
+  top: 0;
+}
+
+.outer:hover .inner:after {
+  bottom: 0;
+}
