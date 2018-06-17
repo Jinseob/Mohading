@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mybatis -->	
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- ibatis -->
+<!-- <!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd"> -->
+
+<mapper namespace="b0010">
+	<select id="selectList_b0010" parameterType="com.portfolio.app.Model.SearchOptionVO" resultType="com.portfolio.app.Model.B0010VO">
+		SELECT * FROM B0010
+<!-- 		 WHERE REF_DT BETWEEN #{fDate} AND #{tDate} -->
+	</select>
+	
+	<select id="select_b0010" parameterType="com.portfolio.app.Model.B0010VO" resultType="com.portfolio.app.Model.B0010VO">
+		SELECT * FROM B0010
+		 WHERE ID = #{id}
+	</select>
+	
+	<!-- Insert B001 -->
+	<insert id="insert_b001" parameterType="com.portfolio.app.Model.B0010VO">
+		INSERT INTO B0010(
+			TITLE,
+			CONTENT,
+
+			CRE_ID,
+			CRE_DT
+			) VALUES(
+			#{title},
+			#{content},
+			
+			#{cre_id},
+			NOW()
+			)
+	</insert>
+	
+	<!-- Update B0010 -->
+	<update id="update_b0010" parameterType="com.portfolio.app.Model.B0010VO">
+		UPDATE B0010 SET 
+			TITLE 	= #{title},
+			CONTENT = #{content}
+		 WHERE ID = #{id}		   
+	</update>
+	
+	<!-- Delete B0010 -->
+	<delete id="delete_b0010" parameterType="com.portfolio.app.Model.B0010VO">
+		UPDATE B0010 SET 
+			DEL_YN = 'Y'
+		 WHERE ID = #{id}		   
+	</delete>
+	
+	<!-- 아파트매매 입력 -->
+	<!-- <insert id="insertApartmentSell" parameterType="com.my.land.model.TBL01VO">
+		INSERT INTO tbl01(
+			SGG,
+			BUNJI,
+			BONBUN,
+			BUBUN,
+			BLDNM,
+			
+			SIZE1,
+			CONTYY,
+			CONTDD,
+			AMT1,
+			FLOOR,
+			
+			VULIDYY,
+			DORONM,
+			TYPE2,
+			TYPE1,
+			SIZE2,
+			
+			AMT2
+			) VALUES(
+			#{sgg},
+			#{bunji},
+			#{bonbun},
+			#{bubun},
+			#{bldnm},
+
+			#{size1},
+			#{contyy},
+			#{contdd},
+			#{amt1},
+			#{floor},
+
+			#{vulidyy},
+			#{doronm},
+			#{type2},
+			#{type1},
+			#{size2},
+
+			#{amt2}
+			)
+	</insert> -->
+	
+</mapper>
